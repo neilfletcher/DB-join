@@ -33,7 +33,7 @@ var CLUB = {
   website: "https://www.duston-bowmen.org.uk/duston-bowmen",
   privacy: "https://www.duston-bowmen.org.uk/duston-bowmen/privacy-statement",
   constitution: "https://www.duston-bowmen.org.uk/duston-bowmen/constitution",
-  facebook: "https://www.facebook.com/dustonbowmen",
+  facebook: "https://www.facebook.com/groups/dustonbowmen",
 
   feeSeason: "1 November 2026 to 30 October 2027",
   // Club fee paid to Duston Bowmen, by category (pounds).
@@ -46,7 +46,7 @@ var CLUB = {
   // Paid by the member straight to Archery GB (2026/27 prices from Archery GB).
   agbFees: { senior: 80, under21: 40, disabled: 40 },
   familyDiscount: "Families get money off the Duston Bowmen part of the fee: 10% for 2 members, 15% for 3, 20% for 4 and 25% for 5. The treasurer will confirm your discount before you pay.",
-  bank: { name: "Duston Bowmen [TBC]", sortCode: "[TBC]", account: "[TBC]" },
+  bank: { name: "Duston Bowmen", sortCode: "30-98-97", account: "54637868" },
 
   venues: [
     { name: "Brampton Heath Golf Centre", address: "Sandy Lane, Church Brampton, Northampton",
@@ -54,14 +54,17 @@ var CLUB = {
       notes: "Our home. 100 yard outdoor range, and indoors in the Cranshaw Suite (20 yards) in autumn and winter." },
     { name: "Long Buckby Scout Hut and Sports Field", address: "Station Road, Long Buckby",
       what3words: "redeemed.corn.clubs", maps: "https://www.google.com/maps/search/?api=1&query=Long+Buckby+Scout+Hut+Station+Road+Long+Buckby",
-      notes: "Our other venue. [TBC: when it's used]" }
+      notes: "Our other venue. We shoot here on Sunday afternoons and on some weekday evenings in the summer (times vary, so check the Facebook group), and it's home of the Long Buckby Frostbite between Boxing Day and New Year's Day." }
   ],
   sessions: [
-    { when: "Tuesday evenings", what: "Club night", where: "Brampton Heath", time: "[TBC: times]" },
-    { when: "Thursday evenings", what: "Club night; indoors in the Cranshaw Suite in autumn and winter", where: "Brampton Heath", time: "[TBC: times]" },
-    { when: "Weekends", what: "Outdoor range", where: "Brampton Heath", time: "[TBC: times]" }
+    { when: "Tuesday (summer season only)", what: "Club night", where: "Brampton Heath", time: "6pm to 8pm" },
+    { when: "Thursday", what: "Club night; indoors in the Cranshaw Suite in autumn and winter", where: "Brampton Heath", time: "6pm to 8pm" },
+    { when: "Sunday", what: "Outdoor range", where: "Brampton Heath", time: "10am to 12pm" },
+    { when: "Sunday afternoon", what: "Outdoor shooting", where: "Long Buckby", time: "Times vary: check the Facebook group" },
+    { when: "Weekday evenings in summer", what: "Outdoor shooting", where: "Long Buckby", time: "Times vary: check the Facebook group" },
+    { when: "Every second Wednesday in summer", what: "Clout shoot; season start and end dates vary", where: "Brampton Heath", time: "6pm to 8pm" }
   ],
-  rangeRule: "The outdoor range can be used all year round, as long as there are two adults there.",
+  rangeRule: "The outdoor range can be used all year round, as long as there are two adults there. If you need anything from the container, a keyholder has to be there too. Sessions are sometimes called off about 30 minutes before because of the weather: check your email and the Facebook group before you set off.",
   bring: [
     "Flat, closed-toe shoes (no sandals on the range).",
     "Close-fitting clothes: loose sleeves and hoods catch the string.",
@@ -69,17 +72,17 @@ var CLUB = {
     "Water and a snack for longer sessions.",
     "Your Archery GB membership card (the e-card on your phone is fine)."
   ],
-  equipment: "Not bought a bow yet? Please don't rush. Talk to our Equipment Officers (Dave Wolfe and Gary Edwards) and our coaches first: they can help you choose kit that fits you, and about borrowing club equipment while you get started.",
+  equipment: "Not bought a bow yet? Please don't rush. Use club equipment while you get started, and talk to an experienced archer or a coach before you buy anything: they can help you choose kit that fits you. Arrows are matched to your bow, so buy them with or after the bow, never before.",
 
   committee: [
-    { role: "Chairman", name: "Phil Linnell", email: "chairman@duston-bowmen.org.uk" },
-    { role: "Vice-Chairman", name: "Hiren Patel", email: "vice-chairman@duston-bowmen.org.uk" },
-    { role: "Secretary", name: "David Sibley", email: "secretary@duston-bowmen.org.uk" },
-    { role: "Treasurer", name: "Dave Birch", email: "treasurer@duston-bowmen.org.uk" },
-    { role: "Coaching Officer", name: "Sylvia Underlin" },
-    { role: "Equipment Officers", name: "Dave Wolfe and Gary Edwards" },
-    { role: "Child Protection Officer", name: "Graham Underlin" },
-    { role: "Records Officer", name: "Peter Watson", email: "records@duston-bowmen.org.uk" }
+    { role: "Chairman", name: "", about: "Anything about how the club is run", email: "chairman@duston-bowmen.org.uk" },
+    { role: "Vice-Chairman", name: "", about: "Standing in for the Chairman", email: "vice-chairman@duston-bowmen.org.uk" },
+    { role: "Secretary", name: "", about: "General enquiries, meetings, letters", email: "secretary@duston-bowmen.org.uk" },
+    { role: "Treasurer", name: "", about: "Fees, family discounts, payments", email: "treasurer@duston-bowmen.org.uk" },
+    { role: "Coaching Officer", name: "", about: "Coaching, if you'd like it" },
+    { role: "Equipment Officers", name: "", about: "Borrowing club kit" },
+    { role: "Child Protection Officer", name: "", about: "Any concern about a child or young person" },
+    { role: "Records Officer", name: "", about: "Score sheets, club records, leagues, badges", email: "records@duston-bowmen.org.uk" }
   ],
   courses: ["September 2026 outdoor course", "Earlier course with Duston Bowmen", "Course or experience at another club", "Other"]
 };
@@ -334,7 +337,7 @@ var CLUB = {
           <fieldset>
             <legend>Health and emergencies</legend>
             <div class="fields">
-              <label class="f full" data-f="medical">Medical information <span class="opt">(optional)</span><textarea name="medical" maxlength="1000" placeholder="Anything our coaches or first aiders should know, e.g. asthma, allergies, epilepsy. Leave blank if none."></textarea><span class="hint">Only the committee sees this.</span></label>
+              <label class="f full" data-f="medical">Medical information <span class="opt">(optional)</span><textarea name="medical" maxlength="1000" placeholder="Anything first aiders should know, e.g. asthma, allergies, epilepsy. Leave blank if none."></textarea><span class="hint">Only the committee sees this.</span></label>
               <label class="f" data-f="emergencyName">Emergency contact name<input type="text" name="emergencyName" maxlength="100" required><span class="err-msg">Please give an emergency contact.</span></label>
               <label class="f" data-f="emergencyRelationship">Relationship to you <span class="opt">(optional)</span><input type="text" name="emergencyRelationship" maxlength="50" placeholder="e.g. Partner, Sister"></label>
               <label class="f" data-f="emergencyPhone">Emergency contact phone<input type="tel" name="emergencyPhone" maxlength="25" required><span class="err-msg">Please give their phone number.</span></label>
@@ -354,7 +357,7 @@ var CLUB = {
 
           <fieldset data-f="photoConsent">
             <legend>Photos</legend>
-            <p class="legend-help">We sometimes share photos from club events on our website and Facebook page.</p>
+            <p class="legend-help">We sometimes share photos from club events on our website and Facebook group.</p>
             <div class="radios" role="radiogroup" aria-label="Photo consent">
               <label><input type="radio" name="photoConsent" value="yes"> Yes, that's fine</label>
               <label><input type="radio" name="photoConsent" value="no"> No, please leave me out</label>
@@ -544,7 +547,7 @@ var CLUB = {
   $("#bring").innerHTML = CLUB.bring.map(function (b) { return "<li>" + txt(b) + "</li>"; }).join("");
   $("#equipment").innerHTML = txt(CLUB.equipment);
   $("#people").innerHTML = CLUB.committee.map(function (p) {
-    return "<div><b>" + esc(p.role) + "</b><span>" + esc(p.name) + "</span>" + (p.email ? '<a href="mailto:' + esc(p.email) + '">' + esc(p.email) + "</a>" : "") + "</div>";
+    return "<div><b>" + esc(p.role) + "</b>" + (p.name ? "<span>" + esc(p.name) + "</span>" : "") + (p.about ? "<small style=\"display:block;color:var(--text-2);margin:2px 0 4px\">" + esc(p.about) + "</small>" : "") + (p.email ? '<a href="mailto:' + esc(p.email) + '">' + esc(p.email) + "</a>" : "") + "</div>";
   }).join("");
   var courseSel = $("select[name=course]");
   CLUB.courses.forEach(function (c) { var o = document.createElement("option"); o.textContent = c; courseSel.appendChild(o); });
