@@ -28,8 +28,6 @@ var SERVICE_URL = "https://script.google.com/macros/s/AKfycbw51ge4bZRkMyhAZfQF9U
 
 var CLUB = {
   email: "info@duston-bowmen.org.uk",
-  phone: "07875 208353",
-  phoneHours: "between 6pm and 8pm",
   website: "https://www.duston-bowmen.org.uk/duston-bowmen",
   privacy: "https://www.duston-bowmen.org.uk/duston-bowmen/privacy-statement",
   constitution: "https://www.duston-bowmen.org.uk/duston-bowmen/constitution",
@@ -493,7 +491,7 @@ var CLUB = {
     <div class="wrap">
       <p class="kicker">Contact</p>
       <h2>Who's who</h2>
-      <p class="intro">Questions about joining? Email <a href="" data-link="email" data-text="email"></a> or call <span data-text="phoneLine"></span>.</p>
+      <p class="intro">Questions about joining? Email <a href="" data-link="email" data-text="email"></a>.</p>
       <div class="people" id="people"></div>
     </div>
   </section>
@@ -520,7 +518,7 @@ var CLUB = {
   /* ------------------------------------------------ render club info */
   var links = { email: "mailto:" + CLUB.email, website: CLUB.website, privacy: CLUB.privacy, constitution: CLUB.constitution, facebook: CLUB.facebook };
   $$("[data-link]").forEach(function (a) { a.href = links[a.getAttribute("data-link")]; });
-  var texts = { email: CLUB.email, phoneLine: CLUB.phone + " (" + CLUB.phoneHours + ")" };
+  var texts = { email: CLUB.email };
   $$("[data-text]").forEach(function (el) { el.textContent = texts[el.getAttribute("data-text")]; });
 
   $("#feeSeason").innerHTML = txt(CLUB.feeSeason);
